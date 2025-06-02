@@ -1,0 +1,145 @@
+.style-switcher
+{
+    position: fixed;
+    right: 0;
+    top: 60px;
+    padding: 15px;
+    width: 200px;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    z-index: 101;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+}
+.style-switcher.open
+{
+    transform: translateX(-25px);
+}
+.style-switcher .s-icon
+{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    background: var(--bg-black-100);
+    color: var(--text-black-900);
+    right: 100%;
+    border: 1px solid var(--bg-black-50);
+    margin-right: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+.style-switcher .s-icon i
+{
+    line-height: 40px;
+}
+.style-switcher .style-switcher-toggler
+{
+    top: 0;
+}
+.style-switcher .day-night
+{
+    top: 55px;
+}
+.style-switcher h4
+{
+    margin: 0 0 10px;
+    color: var(--text-black-700);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.style-switcher .colors
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.style-switcher .colors span
+{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.style-switcher .color-1
+{
+    background: #ec1839;
+}
+.style-switcher .color-2
+{
+    background: #fa5b0f;
+}
+.style-switcher .color-3
+{
+    background: #37b182;
+}
+.style-switcher .color-4
+{
+    background: #1854b4;
+}
+.style-switcher .color-5
+{
+    background: #f021b2;
+}
+
+
+@media (max-width: 768px) {
+
+ 
+  .about .personal-info p.email-row {
+    display: none !important;
+  }
+
+  .education .timeline .timeline-text,
+  .experience .timeline .timeline-text {
+    display: none !important;
+  }
+  .education .timeline .timeline-item,
+  .experience .timeline .timeline-item {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-bottom: 15px !important;
+  }
+  .education .timeline-date,
+  .experience .timeline-date {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  .education .timeline-title,
+  .experience .timeline-title {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .education .timeline-box,
+  .experience .timeline-box {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+  .cv-disclaimer,
+  .cv-disclaimer a {
+    display: none !important;
+  }
+}
