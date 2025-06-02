@@ -1,0 +1,678 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel's Portfolio</title>
+
+  <!-- Google Fonts: Montserrat (400,700), Inter (400,600), Playfair Display, Merriweather, Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@400;600&family=Playfair+Display&family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Color skins (only one enabled by default) -->
+  <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" />
+  <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled />
+  <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled />
+  <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled />
+  <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled />
+  <!-- Style switcher CSS -->
+  <link rel="stylesheet" href="css/style-switcher.css" />
+  <link rel="stylesheet" href="css/mobilefriendly.css" />
+  
+</head>
+
+<!-- ===== Style Switcher Start ===== -->
+<div class="style-switcher">
+  <div class="s-icon style-switcher-toggler">
+    <i class="fas fa-cog fa-spin"></i>
+  </div>
+  <div class="s-icon day-night">
+    <i class="fas fa-moon"></i>
+  </div>
+  <h4>Theme Colors</h4>
+  <div class="colors">
+  <span class="color-1" onclick="setActiveStyle('color-1')" aria-label="Switch to color theme 1"></span>
+  <span class="color-2" onclick="setActiveStyle('color-2')" aria-label="Switch to color theme 2"></span>
+  <span class="color-3" onclick="setActiveStyle('color-3')" aria-label="Switch to color theme 3"></span>
+  <span class="color-4" onclick="setActiveStyle('color-4')" aria-label="Switch to color theme 4"></span>
+  <span class="color-5" onclick="setActiveStyle('color-5')" aria-label="Switch to color theme 5"></span>
+</div>
+</div>
+<!-- ===== Style Switcher End ===== -->
+<body>
+<!-- Easter Egg Popup -->
+<div id="easter-egg-popup" style="display:none; position: fixed; top: 50%; left: 50%; 
+  transform: translate(-50%, -50%) scale(0); background: #d32f2f; color: white; 
+  padding: 30px 40px; border-radius: 15px; box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  font-family: 'Merriweather', serif; font-weight: 700; font-size: 22px; 
+  text-align: center; z-index: 9999; transition: transform 0.4s ease;">
+  🎉 You found the Easter Egg! 🎉<br><br>
+  Thanks for clicking so much! 🚀
+  
+  <br><br>
+  <span style="display:block; font-size: 16px; font-weight: 400; margin-top: 20px; font-style: italic; opacity: 0.8;">
+    -Danybit
+  </span>
+  
+  <button id="close-easter-egg" style="margin-top: 15px; padding: 8px 20px; font-size: 16px; 
+    font-weight: 700; background: white; color: #d32f2f; border: none; border-radius: 8px; cursor: pointer; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15); transition: background-color 0.3s ease;">
+    Close
+  </button>
+</div>
+<!-- Easter Egg Popup -->
+  <!-- ===== Main Container Start ===== -->
+  <div class="main-container">
+    <!-- ===== Aside Start ===== -->
+    <div class="aside">
+      <div class="logo">
+        <a href="#"><span>D</span>anybit</a>
+      </div>
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+      <ul class="nav">
+        <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+        <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+        <li><a href="#services"><i class="fa fa-list"></i>Services</a></li>
+        <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+        <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
+      </ul>
+    </div>
+    <!-- ===== Aside End ===== -->
+    <!-- ===== Main Content Start ===== -->
+    <div class="main-content">
+      <!-- ===== Home Section Start ===== -->
+      <section class="home active section" id="home"> 
+        <div class="container">
+          <div class="row">
+            <div class="home-info padd-15">
+              <h3 class="hello"> Hello, my name is <span class="name">Daniel</span></h3>
+              <h3 class="my-profession">I'm a <span class="typing">Computer Scientist</span></h3>
+              <p  style="font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 28px; color: var(--text-black-700);">
+          I'm a Computer Scientist with a passion for technology.
+          <br>Graduated from the European Informatics Passport - EIPASS
+          <br><br><br>Code is the poetry that programs our dreams.
+        </p>
+                      <a href="#contact" data-section-index="1" class="btn hire-me" 
+   style="
+     font-family: 'Merriweather', serif; 
+     font-weight: 700; 
+     font-size: 18px; 
+     color: white; 
+     background-color: #d32f2f; 
+     padding: 10px 25px; 
+     border-radius: 8px; 
+     text-decoration: none; 
+     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+     transition: background-color 0.3s ease;
+   "
+   onmouseover="this.style.backgroundColor='#a02727';" 
+   onmouseout="this.style.backgroundColor='#d32f2f';"
+>
+  Request my CV
+</a>
+            </div>
+            <div class="home-img padd-15">
+<img id="hero-img" src="images/hero1.jpg" alt="Hero Image" style="cursor: pointer;">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Home Section End ===== -->
+      <!-- ===== About Section Start ===== -->
+      <section class="about section" id="about"> 
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>About Me</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="about-content padd-15">
+              <div class="row">
+                <div class="about-text padd-15">
+                  <h3>I'm Daniel and <span>I'm a Computer Scientist</span></h3>
+				  <p style="font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 28px; color: var(--text-black-700);">
+                  From a young age, my fascination with technology came to life as I eagerly disassembled every electronic device at home, searching for the magic within the circuits. Today I am an Technical Specialist, a Cybersecurity/Pentester, a Web Master and as a hobby I create 3D prints. I also have experience in assembling computers, solder electronic components and Engineering DIY electronics from concept to creation, and sharing them digitally with fellow tinkerers and innovators</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="personal-info padd-15">
+                  <div class="row">
+                    <div class="info-item padd-15">
+                      <p style="font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 28px; color: var(--text-black-700);"> Birthday: <span>May 2003</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p style="font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 28px; color: var(--text-black-700);">Age : <span>22</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p style="font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 28px; color: var(--text-black-700);">Website : <span>https://linktr.ee/_danybit_</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p style="font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 28px; color: var(--text-black-700);">Email : <span>danielmantovaniproject@gmail.com</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p style="font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 28px; color: var(--text-black-700);">Degree : <span>Web Master | Digital Marketing</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p style="font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 28px; color: var(--text-black-700);">City : <span>Como / Milan, Lombardy, Italy</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p style="font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 28px; color: var(--text-black-700);">Freelance : <span>Available</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="buttons padd-15">
+					
+					
+<a href="#contact"
+   class="btn hire-me"
+   onclick="showSection('contact')"
+   style="font-family: 'Merriweather', serif; font-weight: 700; font-size: 18px; color: white; background-color: #d32f2f; padding: 10px 25px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.3s ease;"
+   onmouseover="this.style.backgroundColor='#a02727';"
+   onmouseout="this.style.backgroundColor='#d32f2f';"
+>
+  Hire Me
+</a>
+
+
+                  </div>
+                  </div>
+                </div>
+                <div class="skills padd-15">
+                  <div class="row">
+                    <div class="skill-item padd-15">
+<h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 700; font-size: 16px; color: #d32f2f; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+  HTML 5
+</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 89%;"></div>
+                        <div class="skill-percent">89%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                    <h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 700; font-size: 16px; color: #d32f2f; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+  Batch
+</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 83%;"></div>
+                        <div class="skill-percent">83%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                      <h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 700; font-size: 16px; color: #d32f2f; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+  CSS
+</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 70%;"></div>
+                        <div class="skill-percent">70%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                     <h5 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 700; font-size: 16px; color: #d32f2f; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+  C
+</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 62%;"></div>
+                        <div class="skill-percent">62%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="education padd-15">
+                  <h3 class="title">Education</h3>
+                  <div class="row">
+                    <div class="timeline-box padd-15">
+                      <div class="timeline shadow-dark">
+                        <!-- ===== timeline item ===== -->
+<!-- ===== timeline item ===== -->
+<div class="timeline-item">
+  <div class="circle-dot"></div>
+  <h3 class="timeline-date">
+    <i class="fa fa-calendar"></i> 2023 - 2023
+  </h3>
+  <h4 class="timeline-title">Comptia Security+ (SY0-601) Dion Training</h4>
+  <p class="timeline-text">I completed the CompTIA Security+ (SY0-601) course through Dion Training, gaining a solid foundation in cybersecurity principles. The program covered essential topics such as network security, threat detection and response, risk management, identity and access management, and best practices for securing systems and data in enterprise environments. It prepared me to understand and handle real-world security challenges using industry-standard frameworks.</p>
+</div>
+
+<!-- ===== timeline item ===== -->
+<div class="timeline-item">
+  <div class="circle-dot"></div>
+  <h3 class="timeline-date">
+    <i class="fa fa-calendar"></i> 2023 - 2023
+  </h3>
+  <h4 class="timeline-title">Front-End Development & Technical Support - Rete Informatica Lavoro</h4>
+  <p class="timeline-text">I completed a training program in Front-End Development & Technical Support through Rete Informatica Lavoro, where I gained practical skills in building responsive web interfaces and providing IT support. The course covered key technologies such as HTML, CSS, JavaScript, as well as troubleshooting techniques, system maintenance, and customer assistance best practices.</p>
+</div>
+
+<!-- ===== timeline item ===== -->
+<div class="timeline-item">
+  <div class="circle-dot"></div>
+  <h3 class="timeline-date">
+    <i class="fa fa-calendar"></i> 2019 - 2020
+  </h3>
+  <h4 class="timeline-title">European Informatics Passport - EIPASS</h4>
+  <p class="timeline-text">Certified in essential IT skills: digital literacy, office suite (Word, Excel, PowerPoint), internet and email use, data security, and basic IT management in professional settings.</p>
+</div>
+
+<!-- ===== timeline item ===== -->
+<div class="timeline-item">
+  <div class="circle-dot"></div>
+  <h3 class="timeline-date">
+    <i class="fa fa-calendar"></i> 2020 - 2022
+  </h3>
+  <h4 class="timeline-title">Web Master | Web Developer</h4>
+  <p class="timeline-text">Trained in web design, front-end development (HTML, CSS, JavaScript), basic back-end (PHP, MySQL), CMS management (e.g. WordPress), responsive design, SEO, UX/UI, and website maintenance.</p>
+</div>
+
+						                                 <!-- ===== timeline item ===== -->
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+				
+				
+                <div class="experience padd-15">
+                  <h3 class="title">Experience</h3>
+                  <div class="row">
+                    <div class="timeline-box padd-15">
+                      <div class="timeline shadow-dark">
+                        <!-- ===== timeline item ===== -->
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> 2024 - Present
+                          </h3>
+                          <h4 class="timeline-title">IT Helpdesk – Client Coordination
+</h4>
+                          <p class="timeline-text">
+In my role within IT systems and data infrastructure, I have been responsible for maintaining and optimizing SQL databases, ensuring both performance and data integrity. I’ve managed data handling tasks, including analysis and ETL processes, to better align technical systems with business needs and improve data accessibility. I provided both first and second-level technical support, ensuring high customer satisfaction through efficient troubleshooting and communication.
+I was also involved in full lifecycle ticketing operations—diagnosing issues, resolving them, and maintaining detailed logs. My experience includes managing Linux and Windows environments, with a focus on system stability and performance.</p>
+                        </div>
+                             <!-- ===== timeline item ===== -->
+                             <div class="timeline-item">
+                              <div class="circle-dot"></div>
+                              <h3 class="timeline-date">
+                                <i class="fa fa-calendar"></i> 2023
+                              </h3>
+                              <h4 class="timeline-title">✦ Electronics Testing & Repair</h4>
+                              <p class="timeline-text">
+During my time working for a prestigious electronics company in Italy, I specialized in the repair and testing of complex electronic boards. My responsibilities included component replacement, soldering, short circuit removal, and switch repositioning.
+I operated and maintained testing tools such as SPEA Flying Probe systems, soldering/desoldering stations, and hot air tools. I also programmed and fine-tuned test machines (notably Leonardo 2.0), managing tolerance settings and tip calibrations. Throughout this process, I closely monitored automated testing procedures and ensured full traceability by logging all repairs and modifications.
+
+
+</p>
+                            </div>
+                        
+                                 <!-- ===== timeline item ===== -->
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> 2022
+                          </h3>
+                          <h4 class="timeline-title">✦ CNC Programming & Machining</h4>
+                          <p class="timeline-text">
+In a separate role, I worked with CNC machinery, programming equipment using dedicated software to meet specific technical requirements. I adjusted machine settings to ensure optimal precision, loaded raw materials for processing, and continuously monitored machining operations to maintain both efficiency and quality standards.
+This hands-on experience strengthened my understanding of industrial processes and mechanical systems, further broadening my technical capabilities.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- ===== Disclaimer Start ===== -->
+<div style="width: 100%; text-align: center; margin-bottom: 30px; font-family: 'Montserrat', sans-serif; font-size: 16px; color: var(--text-black-700);">
+  <div style="display: inline-flex; align-items: center; gap: 8px; justify-content: center; white-space: nowrap;">
+    <i class="fa fa-exclamation-triangle" style="color: var(--skin-color); font-size: 20px;"></i>
+    <span class="cv-disclaimer wow fadeInUp" style="margin: 0;">
+      For more about my technical background and certifications, please see my full <strong>CV</strong>.
+    </span>
+  </div>
+
+  <div class="buttons padd-15" style="margin-top: 15px;">
+    <a a href="#contact" data-section-index="1" class="btn hire-me" 
+	                      
+
+       class="btn hire-me"
+       onclick="showSection('contact')"
+       style="font-family: 'Merriweather', serif; font-weight: 700; font-size: 18px; color: white; background-color: #d32f2f; padding: 10px 25px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.3s ease;"
+       onmouseover="this.style.backgroundColor='#a02727';"
+       onmouseout="this.style.backgroundColor='#d32f2f';"
+    >
+      Contact Me
+    </a>
+  </div>
+</div>
+
+<style>
+  /* Dark mode override for disclaimer text */
+  body.dark .cv-disclaimer,
+  body.dark div[style*="width: 100%"] {
+    color: #ddd !important;
+  }
+</style>
+<!-- ===== Disclaimer End ===== -->
+
+
+      </section>
+		<!-- ===== About Section End ===== -->	 
+      <section class="service section" id="services">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Services</h2>
+            </div>
+          </div>
+          <div class="row">
+            <!-- ===== Service item Start ====== -->
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-mobile-alt"></i>
+                </div>
+                <h4>Technical Assistance</h4>
+                <p>Smartphone, PC, Mac, Raspberry, etc.</p>
+              </div>
+            </div>
+            <!-- ===== Service item End ====== -->
+             <!-- ===== Service item Start ====== -->
+             <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-laptop-code"></i>
+                </div>
+                <h4>Web Page and Web Design</h4>
+                <p>I develop web pages according to your tastes.</p>
+              </div>
+            </div>
+            <!-- ===== Service item End ====== -->
+             <!-- ===== Service item Start ====== -->
+             <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-palette"></i>
+                </div>
+                <h4>3D Prints</h4>
+                <p>I create 3D objects of any shape or type.</p>
+              </div>
+            </div>
+            <!-- ===== Service item End ====== -->
+             <!-- ===== Service item Start ====== -->
+             <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-code"></i>
+                </div>
+                <h4>App and Script Programming</h4>
+                <p>
+                  Do you need an app to do a job? Or a script to manage your activities in a smart way? Contact me.</p>
+              </div>
+            </div>
+            <!-- ===== Service item End ====== -->
+             <!-- ===== Service item Start ====== -->
+             <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-search"></i>
+                </div>
+                <h4>Cybersecurity & Penetration Testing</h4>
+                <p>find the flaws, strengthen your systems, protect your business</p>
+              </div>
+            </div>
+            <!-- ===== Service item End ====== -->
+             <!-- ===== Service item Start ====== -->
+             <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon">
+                  <i class="fa fa-bullhorn"></i>
+                </div>
+                <h4>Other Service</h4>
+                <p>Contact me if you need other technical help.</p>
+              </div>
+            </div>
+            <!-- ===== Service item End ====== -->
+          </div>
+        </div>
+      </section>
+      <!-- ===== Services Section End ===== -->
+      <!-- ===== Portfolio Section Start ===== -->
+      <section class="portfolio section" id="portfolio">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Portfolio</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="portfolio-heading padd-15">
+            </div>
+          </div>
+          <div class="row">
+<!-- ====== portfolio item start ====== -->
+<div class="portfolio-item padd-15">
+  <div class="portfolio-item-inner shadow-dark">
+    <div class="portfolio-img">
+      <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 28px; color: var(--skin-color); margin-bottom: 10px;">
+        Wi-Fi Security Testing with NodeMCU
+      </h2>
+      <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.6; color: var(--text-black-700); margin-bottom: 10px;">
+        Developed a tool using NodeMCU (ESP8266) to analyze and test 2.4GHz Wi-Fi network security. Implemented deauthentication attacks and network scanning to evaluate vulnerability levels in real environments.
+      </h4>
+      <a href="https://mega.nz/folder/0ys2zRxZ#y5BrAta2gNF5RuWXeaBqzA" target="_blank" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--skin-color); text-decoration: none; display: inline-block; margin-bottom: 15px;">View Project</a>
+      <img src="images/portfolio/portfolio-1.jpg" alt="">
+    </div>
+  </div>
+</div>
+             <!-- ====== portfolio item start ====== -->
+<div class="portfolio-item padd-15">
+  <div class="portfolio-item-inner shadow-dark">
+    <div class="portfolio-img">
+      <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 28px; color: var(--skin-color); margin-bottom: 10px;">
+        M5StickC Plus – NEMO Captive Portal
+      </h2>
+      <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.6; color: var(--text-black-700); margin-bottom: 10px;">
+Developed a portable Wi-Fi testing tool with M5StickC Plus and NEMO firmware. Created a rogue access point with captive portal to capture credentials and demonstrate social engineering risks.
+Supports SSID cloning and real-time monitoring for educational use      </h4>
+      <a href="https://github.com/DanyBit/M5-Stick-C-Plus-Versione-Italiana-Portale-Captivo" target="_blank" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--skin-color); text-decoration: none; display: inline-block; margin-bottom: 15px;">View Project</a>
+      <img src="images/portfolio/portfolio-2.jpg" alt="">
+    </div>
+  </div>
+</div>
+             <!-- ====== portfolio item start ====== -->
+<div class="portfolio-item padd-15">
+  <div class="portfolio-item-inner shadow-dark">
+    <div class="portfolio-img">
+      <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 28px; color: var(--skin-color); margin-bottom: 10px;">
+        Database Lock Monitor
+      </h2>
+      <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.6; color: var(--text-black-700); margin-bottom: 10px;">
+        Developed a Python GUI application for managing SQL databases via ODBC. Designed to monitor slow queries in real time and terminate connections when table locks are detected, improving database performance and availability.
+      </h4>
+      <a href="https://github.com/DanyBit/Database-Monitor---Lock-Tables-detector" target="_blank" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--skin-color); text-decoration: none; display: inline-block; margin-bottom: 15px;">View Project</a>
+      <img src="images/portfolio/portfolio-3.jpg" alt="">
+    </div>
+  </div>
+</div>
+            <!-- ====== portfolio item End ====== -->
+             <!-- ====== portfolio item start ====== -->
+<div class="portfolio-item padd-15">
+  <div class="portfolio-item-inner shadow-dark">
+    <div class="portfolio-img">
+      <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 28px; color: var(--skin-color); margin-bottom: 10px;">
+        PCAP-Fuser-Converter 
+      </h2>
+      <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.6; color: var(--text-black-700); margin-bottom: 10px;">
+        Python-based GUI app to merge, convert and analyze PCAP/PCAPNG files. Includes CSV and NetXML export for Wi-Fi data analysis and Wigle.net uploads. Clean interface built with Tkinter.
+      </h4>
+      <a href="https://github.com/DanyBit/PCAP-Fuser-Converter" target="_blank" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--skin-color); text-decoration: none; display: inline-block; margin-bottom: 15px;">View Project</a>
+      <img src="images/portfolio/portfolio-4.jpg" alt="PCAP Tools GUI Screenshot">
+    </div>
+  </div>
+</div>
+            <!-- ====== portfolio item End ====== -->
+			<!-- ====== portfolio item start ====== -->
+<div class="portfolio-item padd-15">
+  <div class="portfolio-item-inner shadow-dark">
+    <div class="portfolio-img">
+      <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 28px; color: var(--skin-color); margin-bottom: 10px;">
+        Robo-copy Folder Mover
+      </h2>
+      <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.6; color: var(--text-black-700); margin-bottom: 10px;">
+        Frustrated by Epic Games' lack of folder moving support (unlike Steam), I created a script that automates transferring game installations between drives. It handles file movement and ensures the launcher detects the new path—no reinstallation needed.
+      </h4>
+      <a href="https://github.com/DanyBit/EpicGames-RoboCopy" target="_blank" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--skin-color); text-decoration: none; display: inline-block; margin-bottom: 15px;">View Project</a>
+      <img src="images/portfolio/portfolio-5.jpg" alt="Epic & Steam Game Folder Mover Screenshot">
+    </div>
+  </div>
+</div>
+            <!-- ====== portfolio item End ====== -->
+			<!-- ====== portfolio item start ====== -->
+<div class="portfolio-item padd-15">
+  <div class="portfolio-item-inner shadow-dark">
+    <div class="portfolio-img">
+      <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 28px; color: var(--skin-color); margin-bottom: 10px;">
+        Custom Wardriving Devices
+      </h2>
+      <h4 style="font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 16px; line-height: 1.6; color: var(--text-black-700); margin-bottom: 10px;">
+        Designed and built wardriving devices by assembling and soldering components, combined with 3D-printed custom enclosures for enhanced portability and protection.
+      </h4>
+      <a href="https://www.youtube.com/watch?v=0xVrZQx4MY4" target="_blank" style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--skin-color); text-decoration: none; display: inline-block; margin-bottom: 15px;">View Project</a>
+      <img src="images/portfolio/portfolio-6.jpg" alt="Epic & Steam Game Folder Mover Screenshot">
+    </div>
+  </div>
+</div>
+            <!-- ====== portfolio item End ====== -->
+          </div>
+        </div>
+      </section>
+      <!-- ===== Portfolio Section End ===== -->
+      <!-- ===== Contact Section Start ===== -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Contact Me</h2>
+            </div>
+          </div>
+          <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
+          <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICE</h4>
+          <div class="row">
+            <!-- ===== Contact info item start ====== -->
+            <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-phone"></i></div>
+              <h4>Call me On</h4>
+              <p>+39 3515788950</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+             <!-- ===== Contact info item start ====== -->
+             <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+              <h4>Office</h4>
+              <p>Como, Italy</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+             <!-- ===== Contact info item start ====== -->
+             <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-envelope"></i></div>
+              <h4>Email</h4>
+              <p>danielmantovaniproject@gmail.com</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+             <!-- ===== Contact info item start ====== -->
+             <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-globe-europe"></i></div>
+              <h4>Instagram</h4>
+              <p>www.instagram.com/_danybit_/</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+          </div>
+          <h4 class="contact-sub-title ">I'M VERY RESPOSIVE TO MESSAGES</h4>
+ 
+  <div class="style-switcher">
+    <div class="style-switcher-toggler s-icon">
+      <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon">
+      <i class="fas "></i>
+    </div>
+    <h4>Theme Colors</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    </div>
+  </div>
+  <!-- ===== Style Switcher End ===== -->
+  <!-- ===== JS Files ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+  <script src="js/script.js"></script>
+  <script src="js/style-switcher.js"></script>
+  <!-- altri contenuti HTML -->
+
+<script>
+const dayNight = document.querySelector(".day-night");
+
+dayNight.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  if(document.body.classList.contains("dark")) {
+    dayNight.querySelector("i").classList.replace("fa-moon", "fa-sun");
+  } else {
+    dayNight.querySelector("i").classList.replace("fa-sun", "fa-moon");
+  }
+});
+</script>
+<script>
+  const heroImg = document.getElementById('hero-img');
+  const popup = document.getElementById('easter-egg-popup');
+  const closeBtn = document.getElementById('close-easter-egg');
+
+  let clickCount = 0;
+  const requiredClicks = 5;
+  let clickTimeout;
+
+  heroImg.addEventListener('click', () => {
+    clickCount++;
+
+    clearTimeout(clickTimeout);
+    clickTimeout = setTimeout(() => {
+      clickCount = 0;
+    }, 2000);
+
+    if (clickCount === requiredClicks) {
+      clickCount = 0;
+      // Mostra il popup con animazione
+      popup.style.display = 'block';
+      setTimeout(() => {
+        popup.style.transform = 'translate(-50%, -50%) scale(1)';
+      }, 10);
+    }
+  });
+
+  closeBtn.addEventListener('click', () => {
+    // Nascondi popup con animazione
+    popup.style.transform = 'translate(-50%, -50%) scale(0)';
+    setTimeout(() => {
+      popup.style.display = 'none';
+    }, 400);
+  });
+</script>
+</body>
+</html>
+
+</body>
+</html>
+
+
+
