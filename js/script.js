@@ -1,11 +1,14 @@
 /* ============================== typing animation ============================ */
+const isMobile = window.innerWidth <= 768;
+
 var typed = new Typed(".typing", {
     strings: ["", "Computer Scientist", "Cybersecurity Enthusiast", "Tech Rescue", "Technical Expert", "Web Developer"],
-    typeSpeed: 50,      
-    backSpeed: 40,     
-    backDelay: 1500,    
+    typeSpeed: isMobile ? 80 : 50,
+    backSpeed: isMobile ? 60 : 40,
+    backDelay: isMobile ? 2500 : 1500,
     loop: true
 });
+
 /* ============================== Aside ============================ */
 const nav = document.querySelector(".nav"),
       navList = nav.querySelectorAll("li"),
@@ -91,5 +94,3 @@ const nav = document.querySelector(".nav"),
                     allSection[i].classList.toggle("open");
                 }
             }
-			
-			
