@@ -1,3 +1,23 @@
+body {
+  background-color: #000000;  
+  color: #ffffff;            
+}
+
+:root {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --text-black-700: #bbbbbb; 
+  --skin-color: #ff4081;     
+}
+
+.cv-disclaimer {
+  color: var(--text-color);
+}
+
+a, a:visited {
+  color: var(--skin-color);
+}
+
 @media (max-width: 768px) {
   .typing {
     font-size: 16px !important;
